@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Soal 5.css">
+  <title>Soal 5 DOM</title>
+</head>
+<body>
+
+<p id="changeSentence" onclick="changeText()">Saya merasa belum bisa belajar JavaScript</p>
+
+<script>
+  function changeText() {
+    const sentenceElement = document.getElementById('changeSentence');
+
+    // Ubah teks kalimat
+    sentenceElement.textContent = "Ternyata saya masih kurang berlatih belajar JavaScript";
+
+    // Ubah warna background
+    document.body.style.backgroundColor = 'green';
+
+    // Hapus event listener setelah di klik
+    sentenceElement.removeEventListener('click', changeText);
+  }
+</script>
+
+</body>
+</html>
